@@ -26,26 +26,23 @@ class QueryRequest(BaseModel):
     query: str
 
 
-class QueryResponse(BaseModel):
-    answer: str
-
-
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
 
 
+class QueryResponse(BaseModel):
+    answer: str
+    debug_log: list = []
+
+
 @app.post("/query", response_model=QueryResponse)
 def query_endpoint(request: QueryRequest):
-    # FastAPI parses the incoming JSON body into a QueryRequest automatically
-    # — if the body doesn't have a "query" string field, it 422s before this
-    # function even runs. That validation is the main thing Pydantic buys you
-    # here, beyond just being a typed function signature.
     if not request.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
 
-    answer = run_agent(request.query)
-    return QueryResponse(answer=answer)
+    result = run_agent(request.query)
+    return QueryResponse(answer=result["answer"], debug_log=result["debug_log"])
 
 
 if __name__ == '__main__':

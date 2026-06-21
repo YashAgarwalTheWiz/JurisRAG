@@ -1,0 +1,146 @@
+[
+  {
+    "id": "q1",
+    "query": "Which cases invoke Section 302 of the Indian Penal Code?",
+    "relevant_case_ids": ["1950_28", "1952_8", "1952_19", "1952_93", "1953_78", "1956_69", "2001_1005", "2004_139"],
+    "note": "graph/structured — clean section_key match expected, no known act-name variant issue here"
+  },
+  {
+    "id": "q2",
+    "query": "Which cases invoke Article 374 of the Constitution of India?",
+    "relevant_case_ids": ["1950_30", "1950_31", "1950_32", "1950_56"],
+    "note": "graph/structured — small clean slice, good sanity check"
+  },
+  {
+    "id": "q3",
+    "query": "Which cases involve Section 66 of the Indian Income-tax Act?",
+    "relevant_case_ids": ["1950_52", "1950_53", "1953_85", "1956_56"],
+    "note": "graph/structured"
+  },
+  {
+    "id": "q4",
+    "query": "Which cases were decided under the Representation of the People Act?",
+    "relevant_case_ids": ["1952_71", "1956_64", "2008_188"],
+    "note": "graph/structured"
+  },
+  {
+    "id": "q5",
+    "query": "Which cases invoke the Criminal Procedure Code?",
+    "relevant_case_ids": ["1950_10", "1950_28", "1952_21", "1952_93", "1953_31", "1953_78", "1953_88", "1956_11", "2008_1460", "2010_721"],
+    "note": "BUG TEST — true set spans two stored variants: 'Criminal Procedure Code' (6 cases: 1950_10, 1950_28, 1953_31, 1953_78, 1953_88, 1956_11) and 'Code of Criminal Procedure' (4 cases: 1952_21, 1952_93, 2008_1460, 2010_721). The fuzzy CONTAINS match in get_cases_by_act won't unify these — expect ~half the true set depending on which phrasing the classifier extracts from the query."
+  },
+  {
+    "id": "q6",
+    "query": "Which cases invoke the Civil Procedure Code?",
+    "relevant_case_ids": ["1950_10", "1950_4", "1950_41", "1952_27", "1953_116", "1953_20", "1956_42", "2008_188", "2008_368"],
+    "note": "BUG TEST — same fragmentation as q5, civil side: 'Civil Procedure Code' (3 cases) vs 'Code of Civil Procedure' (5 cases) vs 'Code of Civil Procedure, 1908' (1 case, 2008_188)"
+  },
+  {
+    "id": "q7",
+    "query": "Which cases did Justice Mehr Chand Mahajan preside over?",
+    "relevant_case_ids": ["1950_10", "1950_13", "1950_31", "1950_32", "1952_35", "1952_51", "1952_71", "1952_93", "1953_19", "1953_20", "1953_106"],
+    "note": "BUG TEST — 1952_51 is stored as judge name 'MAHAJANJ' (OCR-garbled 'Mahajan, J.'), not 'Mehr Chand Mahajan'. Exact-match judge lookup will miss it. This is the bug already flagged in your README's Known Limitations, now with a concrete failing case."
+  },
+  {
+    "id": "q8",
+    "query": "Which cases did Justice Patanjali Sastri preside over?",
+    "relevant_case_ids": ["1950_10", "1950_52", "1950_53", "1952_35", "1952_71", "1953_31", "1953_119", "1956_11"],
+    "note": "control — spelling is consistent across all occurrences, should retrieve cleanly. Compare against q7 to isolate 'exact-match works when extraction is consistent' vs 'fails when it isn't'"
+  },
+  {
+    "id": "q9",
+    "query": "What happened in case 2019_890?",
+    "relevant_case_ids": ["2019_890"],
+    "note": "by_case_id control — single exact lookup"
+  },
+  {
+    "id": "q10",
+    "query": "Summarize case 2002_151",
+    "relevant_case_ids": ["2002_151"],
+    "note": "by_case_id control"
+  },
+  {
+    "id": "q11",
+    "query": "What cases does 2019_890 cite?",
+    "relevant_case_ids": [],
+    "note": "DIAGNOSTIC, not a recall test — none of 2019_890's 9 cited IDs exist in this 71-case corpus, so get_cited_cases will correctly return empty. Expected result is 0 results, not a failure. Exclude from quantitative averages; use to document the 'citation graph is sparse at this scale' limitation."
+  },
+  {
+    "id": "q12",
+    "query": "What cases does 1953_88 cite?",
+    "relevant_case_ids": [],
+    "note": "DIAGNOSTIC — same purpose as q11, second data point. Checked all 71 cases' cites lists against each other: zero intra-corpus citation overlaps exist anywhere in this set."
+  },
+  {
+    "id": "q13",
+    "query": "Cases involving murder convictions and appeals against conviction under the IPC",
+    "relevant_case_ids": ["1950_28", "1952_8", "1952_19", "1952_93", "1953_78", "1956_69", "2001_1005", "2004_139"],
+    "note": "semantic/vector — identical ground truth to q1, deliberately, to compare vector recall vs graph recall on the same true set"
+  },
+  {
+    "id": "q14",
+    "query": "Cases about income tax assessment and reference appeals",
+    "relevant_case_ids": ["1950_17", "1950_35", "1950_52", "1950_53", "1953_12", "1953_85", "1956_56", "2000_1026"],
+    "note": "semantic/vector"
+  },
+  {
+    "id": "q15",
+    "query": "Cases about preventive detention and habeas corpus petitions",
+    "relevant_case_ids": ["1953_31", "1956_46", "1956_11", "1956_69"],
+    "note": "semantic/vector"
+  },
+  {
+    "id": "q16",
+    "query": "Cases about freedom of speech, press, and restrictions on public order",
+    "relevant_case_ids": ["1950_10", "1950_13", "1952_35"],
+    "note": "semantic/vector — these three look like the classic early press-freedom trio (Madras/East Punjab public order + Press Emergency Powers Act cases)"
+  },
+  {
+    "id": "q17",
+    "query": "Cases about challenges to arbitration awards or an arbitrator's mandate",
+    "relevant_case_ids": ["1953_20", "2004_764", "2019_890"],
+    "note": "semantic/vector"
+  },
+  {
+    "id": "q18",
+    "query": "Cases about election petitions and disputes",
+    "relevant_case_ids": ["1952_71", "1956_64", "2008_188"],
+    "note": "semantic/vector — identical ground truth to q4, compare vector vs graph"
+  },
+  {
+    "id": "q19",
+    "query": "Cases about tenancy, leases, and rent control disputes",
+    "relevant_case_ids": ["1952_80", "1953_19", "2008_368"],
+    "note": "semantic/vector"
+  },
+  {
+    "id": "q20",
+    "query": "Cases about Hindu personal law, succession, and inheritance",
+    "relevant_case_ids": ["1950_54", "1953_106", "2005_208"],
+    "note": "semantic/vector — 1953_106 has no usable sections extracted ('section not specified'), so this case can ONLY be found via vector search, never graph. Good isolation test."
+  },
+  {
+    "id": "q21",
+    "query": "Cases about Muslim personal law and dower (mahr)",
+    "relevant_case_ids": ["1950_30"],
+    "note": "semantic/vector — single-case precision test"
+  },
+  {
+    "id": "q22",
+    "query": "Cases about Andhra Pradesh local cadre recruitment disputes under Article 371-D",
+    "relevant_case_ids": ["1947_378", "2014_170"],
+    "note": "DATA QUALITY FLAG, not just a retrieval test — 1947_378 and 2014_170 have near-identical snippets, the same judge (S. Thakur), and overlapping acts/sections/citations. They may be the same judgment ingested under two different dataset IDs. Worth manually checking the raw HF dataset entries before trusting this as two distinct cases."
+  },
+  {
+    "id": "q23",
+    "query": "What happened in case 2007_946?",
+    "relevant_case_ids": ["2007_946"],
+    "note": "EXTRACTION QUALITY FLAG — this case's extracted 'judges' field includes Cardozo, Frankfurter, Holmes, and Hugo Black, who are US Supreme Court justices, never Indian SC judges. Almost certainly pulled from a citation inside the judgment text rather than the actual bench. Good evidence for an entity-extraction-accuracy metric."
+  },
+  {
+    "id": "q24",
+    "query": "What happened in case 1954_15?",
+    "relevant_case_ids": ["1954_15"],
+    "note": "EXTRACTION QUALITY FLAG — this case has zero judges, acts, or sections extracted despite having a full text snippet. A clean example of a total extraction failure for the entity-extraction accuracy writeup."
+  }
+]

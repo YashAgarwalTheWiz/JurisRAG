@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "q1",
+    "query": "Which cases invoke Section 302 of the Indian Penal Code?",
+    "relevant_case_ids": [
+      "1950_28",
+      "1952_19",
+      "1952_8",
+      "1952_93",
+      "1953_78",
+      "1956_69",
+      "2001_1005",
+      "2004_139"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_section",
+      "section_number": "302",
+      "act_name": "Indian Penal Code",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_28",
+      "2001_1005",
+      "1952_93",
+      "1952_21",
+      "1950_56",
+      "1953_78",
+      "2004_139",
+      "1953_88",
+      "1950_54",
+      "2008_1460"
+    ],
+    "graph_ids": [
+      "1956_69",
+      "1950_28",
+      "1952_93",
+      "1952_19",
+      "1952_8",
+      "1953_78",
+      "2001_1005",
+      "2004_139"
+    ],
+    "hybrid_ids": [
+      "1950_28",
+      "2001_1005",
+      "1952_93",
+      "1952_21",
+      "1956_69",
+      "1952_19"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.375,
+        "precision@5": 0.6,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.625,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 0.5,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q2",
+    "query": "Which cases invoke Article 374 of the Constitution of India?",
+    "relevant_case_ids": [
+      "1950_30",
+      "1950_31",
+      "1950_32",
+      "1950_56"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_section",
+      "section_number": "374",
+      "act_name": "Constitution of India",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_32",
+      "1952_35",
+      "1956_69",
+      "1956_11",
+      "1950_13",
+      "1950_56",
+      "1950_10",
+      "1953_31",
+      "1956_46",
+      "1952_33"
+    ],
+    "graph_ids": [
+      "1950_56",
+      "1950_30"
+    ],
+    "hybrid_ids": [
+      "1950_32",
+      "1952_35",
+      "1956_69",
+      "1956_11",
+      "1950_56",
+      "1950_30"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.5,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 0.5,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q3",
+    "query": "Which cases involve Section 66 of the Indian Income-tax Act?",
+    "relevant_case_ids": [
+      "1950_52",
+      "1950_53",
+      "1953_85",
+      "1956_56"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_section",
+      "section_number": "66",
+      "act_name": "Indian Income-tax Act",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1956_56",
+      "1950_53",
+      "1953_85",
+      "1950_52",
+      "2000_1026",
+      "1950_35",
+      "1952_27",
+      "1953_12",
+      "1956_22",
+      "2001_1100"
+    ],
+    "graph_ids": [
+      "1956_56",
+      "1950_53",
+      "1950_52"
+    ],
+    "hybrid_ids": [
+      "1956_56",
+      "1950_53",
+      "1953_85",
+      "1950_52"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.75,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q4",
+    "query": "Which cases were decided under the Representation of the People Act?",
+    "relevant_case_ids": [
+      "1952_71",
+      "1956_64",
+      "2008_188"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_act",
+      "section_number": null,
+      "act_name": "Representation of the People Act",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1956_64",
+      "2008_188",
+      "1952_35",
+      "2008_368",
+      "1956_69",
+      "1950_56",
+      "1950_13",
+      "1956_62",
+      "1950_28",
+      "1956_11"
+    ],
+    "graph_ids": [
+      "1952_71",
+      "2008_188",
+      "1956_64"
+    ],
+    "hybrid_ids": [
+      "1956_64",
+      "2008_188",
+      "1952_35",
+      "2008_368",
+      "1952_71"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.6,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q5",
+    "query": "Which cases invoke the Criminal Procedure Code?",
+    "relevant_case_ids": [
+      "1950_10",
+      "1950_28",
+      "1952_21",
+      "1952_93",
+      "1953_31",
+      "1953_78",
+      "1953_88",
+      "1956_11",
+      "2008_1460",
+      "2010_721"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_act",
+      "section_number": null,
+      "act_name": "Criminal Procedure Code",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1952_21",
+      "1952_93",
+      "2008_1460",
+      "2004_139",
+      "2001_1005",
+      "1950_56",
+      "1950_28",
+      "1953_88",
+      "1953_31",
+      "1953_78"
+    ],
+    "graph_ids": [
+      "1956_11",
+      "1950_10",
+      "1953_88",
+      "1950_28",
+      "1953_78",
+      "1953_31"
+    ],
+    "hybrid_ids": [
+      "1952_21",
+      "1952_93",
+      "2008_1460",
+      "2004_139",
+      "1956_11",
+      "1950_10",
+      "1953_88",
+      "1950_28"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.3,
+        "precision@5": 0.6,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.5,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 0.4,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q6",
+    "query": "Which cases invoke the Civil Procedure Code?",
+    "relevant_case_ids": [
+      "1950_10",
+      "1950_4",
+      "1950_41",
+      "1952_27",
+      "1953_116",
+      "1953_20",
+      "1956_42",
+      "2008_188",
+      "2008_368"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_act",
+      "section_number": null,
+      "act_name": "Civil Procedure Code",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1956_22",
+      "1950_4",
+      "1953_19",
+      "1952_27",
+      "1953_23",
+      "2008_1460",
+      "2008_368",
+      "1952_51",
+      "1952_105",
+      "1956_64"
+    ],
+    "graph_ids": [
+      "1950_10",
+      "1950_4",
+      "1953_116"
+    ],
+    "hybrid_ids": [
+      "1956_22",
+      "1950_4",
+      "1953_19",
+      "1952_27",
+      "1950_10",
+      "1953_116"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.2222222222222222,
+        "precision@5": 0.4,
+        "mrr": 0.5
+      },
+      "graph": {
+        "recall@5": 0.3333333333333333,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 0.3333333333333333,
+        "precision@5": 0.6,
+        "mrr": 0.5
+      }
+    }
+  },
+  {
+    "id": "q7",
+    "query": "Which cases did Justice Mehr Chand Mahajan preside over?",
+    "relevant_case_ids": [
+      "1950_10",
+      "1950_13",
+      "1950_31",
+      "1950_32",
+      "1952_35",
+      "1952_51",
+      "1952_71",
+      "1952_93",
+      "1953_106",
+      "1953_19",
+      "1953_20"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_judge",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": "Justice Mehr Chand Mahajan",
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_13",
+      "1952_35",
+      "1950_44",
+      "1950_32",
+      "1952_93",
+      "1952_51",
+      "1956_42",
+      "1952_8",
+      "1952_27",
+      "1953_88"
+    ],
+    "graph_ids": [
+      "1950_44",
+      "1950_31",
+      "1953_20",
+      "1952_93",
+      "1950_32",
+      "1952_35",
+      "1953_106",
+      "1953_19",
+      "1950_13",
+      "1950_10",
+      "1952_71"
+    ],
+    "hybrid_ids": [
+      "1950_13",
+      "1952_35",
+      "1950_44",
+      "1950_32",
+      "1950_31",
+      "1953_20",
+      "1952_93"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.36363636363636365,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.36363636363636365,
+        "precision@5": 0.8,
+        "mrr": 0.5
+      },
+      "hybrid": {
+        "recall@5": 0.36363636363636365,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q8",
+    "query": "Which cases did Justice Patanjali Sastri preside over?",
+    "relevant_case_ids": [
+      "1950_10",
+      "1950_52",
+      "1950_53",
+      "1952_35",
+      "1952_71",
+      "1953_119",
+      "1953_31",
+      "1956_11"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_judge",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": "Patanjali Sastri",
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_10",
+      "1950_13",
+      "1953_119",
+      "1953_31",
+      "1952_35",
+      "1953_23",
+      "1956_42",
+      "2001_1005",
+      "2008_1460",
+      "1953_116"
+    ],
+    "graph_ids": [
+      "1950_52",
+      "1950_13",
+      "1950_53",
+      "1950_10",
+      "1952_35",
+      "1953_119",
+      "1956_11",
+      "1952_71",
+      "1953_31"
+    ],
+    "hybrid_ids": [
+      "1950_10",
+      "1950_13",
+      "1953_119",
+      "1953_31",
+      "1950_52",
+      "1950_53"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.5,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.5,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 0.5,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q9",
+    "query": "What happened in case 2019_890?",
+    "relevant_case_ids": [
+      "2019_890"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_case_id",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "2019_890"
+    },
+    "vector_ids": [
+      "2019_890",
+      "1950_54",
+      "2002_151",
+      "1950_31",
+      "2001_1005",
+      "2008_1460",
+      "1950_30",
+      "1950_4",
+      "2010_721",
+      "2003_78"
+    ],
+    "graph_ids": [
+      "2019_890"
+    ],
+    "hybrid_ids": [
+      "2019_890",
+      "1950_54",
+      "2002_151",
+      "1950_31"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.25,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q10",
+    "query": "Summarize case 2002_151",
+    "relevant_case_ids": [
+      "2002_151"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_case_id",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "2002_151"
+    },
+    "vector_ids": [
+      "2004_139",
+      "1952_8",
+      "1950_31",
+      "1950_54",
+      "1950_32",
+      "1950_30",
+      "2010_721",
+      "1956_46",
+      "1953_19",
+      "1950_44"
+    ],
+    "graph_ids": [
+      "2002_151"
+    ],
+    "hybrid_ids": [
+      "2004_139",
+      "1952_8",
+      "1950_31",
+      "1950_54",
+      "2002_151"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "graph": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.2
+      }
+    }
+  },
+  {
+    "id": "q11",
+    "query": "What cases does 2019_890 cite?",
+    "relevant_case_ids": [],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_citation",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "2019_890"
+    },
+    "vector_ids": [
+      "1950_54",
+      "1950_56",
+      "2008_1460",
+      "1953_23",
+      "2001_1005",
+      "2004_764",
+      "1956_69",
+      "1950_41",
+      "1953_116",
+      "2002_151"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1950_54",
+      "1950_56",
+      "2008_1460",
+      "1953_23"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "graph": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      }
+    }
+  },
+  {
+    "id": "q12",
+    "query": "What cases does 1953_88 cite?",
+    "relevant_case_ids": [],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_citation",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "1953_88"
+    },
+    "vector_ids": [
+      "1953_116",
+      "1953_88",
+      "1953_78",
+      "1953_62",
+      "1953_31",
+      "1953_85",
+      "1956_22",
+      "1956_70",
+      "1956_21",
+      "1956_64"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1953_116",
+      "1953_88",
+      "1953_78",
+      "1953_62"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "graph": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": null,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      }
+    }
+  },
+  {
+    "id": "q13",
+    "query": "Cases involving murder convictions and appeals against conviction under the IPC",
+    "relevant_case_ids": [
+      "1950_28",
+      "1952_19",
+      "1952_8",
+      "1952_93",
+      "1953_78",
+      "1956_69",
+      "2001_1005",
+      "2004_139"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1952_93",
+      "1950_28",
+      "2001_1005",
+      "1953_88",
+      "1952_19",
+      "1952_21",
+      "1953_78",
+      "2004_139",
+      "1950_56",
+      "2008_1460"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1952_93",
+      "1950_28",
+      "2001_1005",
+      "1953_88"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.5,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.375,
+        "precision@5": 0.75,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q14",
+    "query": "Cases about income tax assessment and reference appeals",
+    "relevant_case_ids": [
+      "1950_17",
+      "1950_35",
+      "1950_52",
+      "1950_53",
+      "1953_12",
+      "1953_85",
+      "1956_56",
+      "2000_1026"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_52",
+      "1953_85",
+      "1956_56",
+      "1950_53",
+      "1950_35",
+      "2000_1026",
+      "2004_764",
+      "1953_12",
+      "1950_54",
+      "2001_1100"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1950_52",
+      "1953_85",
+      "1956_56",
+      "1950_53"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.625,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.5,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q15",
+    "query": "Cases about preventive detention and habeas corpus petitions",
+    "relevant_case_ids": [
+      "1953_31",
+      "1956_11",
+      "1956_46",
+      "1956_69"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1956_46",
+      "1956_11",
+      "1953_31",
+      "1950_56",
+      "1956_69",
+      "1952_33",
+      "1950_13",
+      "1950_10",
+      "1952_35",
+      "1947_378"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1956_46",
+      "1956_11",
+      "1953_31",
+      "1950_56"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.8,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.75,
+        "precision@5": 0.75,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q16",
+    "query": "Cases about freedom of speech, press, and restrictions on public order",
+    "relevant_case_ids": [
+      "1950_10",
+      "1950_13",
+      "1952_35"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_10",
+      "1950_13",
+      "1952_35",
+      "1952_33",
+      "1956_11",
+      "1950_56",
+      "1956_69",
+      "1956_46",
+      "1953_31",
+      "1956_42"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1950_10",
+      "1950_13",
+      "1952_35",
+      "1952_33"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.6,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.75,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q17",
+    "query": "Cases about challenges to arbitration awards or an arbitrator's mandate",
+    "relevant_case_ids": [
+      "1953_20",
+      "2004_764",
+      "2019_890"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "2004_764",
+      "1950_5",
+      "2019_890",
+      "1950_32",
+      "1950_31",
+      "1947_378",
+      "2014_170",
+      "1953_119",
+      "2007_946",
+      "1953_62"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "2004_764",
+      "1950_5",
+      "2019_890",
+      "1950_32"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.5,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q18",
+    "query": "Cases about election petitions and disputes",
+    "relevant_case_ids": [
+      "1952_71",
+      "1956_64",
+      "2008_188"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1956_64",
+      "2008_188",
+      "1956_62",
+      "1952_33",
+      "1950_56",
+      "1952_71",
+      "1956_69",
+      "1956_11",
+      "1950_13",
+      "1952_8"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1956_64",
+      "2008_188",
+      "1956_62",
+      "1952_33"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.5,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q19",
+    "query": "Cases about tenancy, leases, and rent control disputes",
+    "relevant_case_ids": [
+      "1952_80",
+      "1953_19",
+      "2008_368"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "2008_368",
+      "1956_22",
+      "1950_54",
+      "1952_80",
+      "1950_41",
+      "1953_116",
+      "2004_764",
+      "1952_8",
+      "1953_19",
+      "2005_208"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "2008_368",
+      "1956_22",
+      "1950_54",
+      "1952_80"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.5,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q20",
+    "query": "Cases about Hindu personal law, succession, and inheritance",
+    "relevant_case_ids": [
+      "1950_54",
+      "1953_106",
+      "2005_208"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "2005_208",
+      "1950_54",
+      "1952_8",
+      "1956_42",
+      "1950_33",
+      "2010_721",
+      "2002_473",
+      "1953_106",
+      "1952_105",
+      "1950_53"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "2005_208",
+      "1950_54",
+      "1952_8",
+      "1956_42"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.5,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q21",
+    "query": "Cases about Muslim personal law and dower (mahr)",
+    "relevant_case_ids": [
+      "1950_30"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "1950_30",
+      "1950_54",
+      "1952_8",
+      "1950_31",
+      "2005_208",
+      "2002_151",
+      "2002_473",
+      "2004_139",
+      "1956_42",
+      "1952_93"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "1950_30",
+      "1950_54",
+      "1952_8",
+      "1950_31"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.25,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q22",
+    "query": "Cases about Andhra Pradesh local cadre recruitment disputes under Article 371-D",
+    "relevant_case_ids": [
+      "1947_378",
+      "2014_170"
+    ],
+    "classification": {
+      "needs_vector": true,
+      "needs_graph": false,
+      "graph_query_type": "none",
+      "section_number": null,
+      "act_name": "Indian Penal Code",
+      "judge_name": null,
+      "case_id": null
+    },
+    "vector_ids": [
+      "2014_170",
+      "1947_378",
+      "1950_32",
+      "1950_31",
+      "1950_56",
+      "2007_946",
+      "1956_69",
+      "2010_721",
+      "1952_71",
+      "1953_119"
+    ],
+    "graph_ids": [],
+    "hybrid_ids": [
+      "2014_170",
+      "1947_378",
+      "1950_32",
+      "1950_31"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0
+      },
+      "graph": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.5,
+        "mrr": 1.0
+      }
+    }
+  },
+  {
+    "id": "q23",
+    "query": "What happened in case 2007_946?",
+    "relevant_case_ids": [
+      "2007_946"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_case_id",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "2007_946"
+    },
+    "vector_ids": [
+      "2008_188",
+      "2007_946",
+      "1950_54",
+      "2010_721",
+      "1950_31",
+      "2001_1005",
+      "2002_151",
+      "2005_208",
+      "1950_32",
+      "1956_46"
+    ],
+    "graph_ids": [
+      "2007_946"
+    ],
+    "hybrid_ids": [
+      "2008_188",
+      "2007_946",
+      "1950_54",
+      "2010_721"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5
+      },
+      "graph": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.25,
+        "mrr": 0.5
+      }
+    }
+  },
+  {
+    "id": "q24",
+    "query": "What happened in case 1954_15?",
+    "relevant_case_ids": [
+      "1954_15"
+    ],
+    "classification": {
+      "needs_vector": false,
+      "needs_graph": true,
+      "graph_query_type": "by_case_id",
+      "section_number": null,
+      "act_name": null,
+      "judge_name": null,
+      "case_id": "1954_15"
+    },
+    "vector_ids": [
+      "1956_64",
+      "1953_31",
+      "1956_72",
+      "1956_62",
+      "1956_56",
+      "1956_22",
+      "1953_62",
+      "1953_88",
+      "1956_21",
+      "1956_11"
+    ],
+    "graph_ids": [
+      "1954_15"
+    ],
+    "hybrid_ids": [
+      "1956_64",
+      "1953_31",
+      "1956_72",
+      "1956_62",
+      "1954_15"
+    ],
+    "metrics": {
+      "vector": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0
+      },
+      "graph": {
+        "recall@5": 1.0,
+        "precision@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.2
+      }
+    }
+  }
+]

@@ -1,8 +1,10 @@
-from typing import TypedDict, Optional, List, Dict, Any
+import operator
+from typing import Annotated, TypedDict, Optional, List, Dict, Any
 from pydantic import BaseModel
 from langgraph.graph import StateGraph, END
 from langchain_groq import ChatGroq
 from config import GROQ_API_KEY
+from agent.observability import log_node
 from retrieval.vector_retriever import vector_search
 from retrieval.cypher_retriever import (
     get_cases_by_section,
@@ -34,8 +36,9 @@ class AgentState(TypedDict):
     vector_results: List[Dict[str, Any]]
     graph_results: List[Dict[str, Any]]
     answer: str
+    debug_log: Annotated[list[dict], operator.add]
 
-
+@log_node("classify_query")
 def classify_query(state: AgentState) -> dict:
     prompt = f"""
     You are a routing system for a legal research assistant. Given a query,
@@ -67,7 +70,7 @@ def classify_query(state: AgentState) -> dict:
     print(f"[DEBUG] classification: {classification}")
     return {"classification": classification}
 
-
+@log_node("vector_search")
 def run_vector_search(state: AgentState) -> dict:
     if not state["classification"].needs_vector:
         return {"vector_results": []}
@@ -75,7 +78,7 @@ def run_vector_search(state: AgentState) -> dict:
     print(f"[DEBUG] vector_results count: {len(results)}")
     return {"vector_results": results}
 
-
+@log_node("graph_search")
 def run_graph_search(state: AgentState) -> dict:
     c = state["classification"]
     if not c.needs_graph:
@@ -98,7 +101,7 @@ def run_graph_search(state: AgentState) -> dict:
     print(f"[DEBUG] graph_query_type={c.graph_query_type} -> {len(results)} results")
     return {"graph_results": results}
 
-
+@log_node("generate_answer")
 def generate_answer(state: AgentState) -> dict:
     vector_results = state.get("vector_results", [])
     graph_results = state.get("graph_results", [])
@@ -155,6 +158,6 @@ builder.add_edge("generate", END)
 graph = builder.compile()
 
 
-def run_agent(query: str) -> str:
+def run_agent(query: str) -> dict:
     result = graph.invoke({"query": query})
-    return result["answer"]
+    return {"answer": result["answer"], "debug_log": result.get("debug_log", [])}

@@ -1,7 +1,26 @@
+import re
 from neo4j import GraphDatabase
 from config import NEO4J_URL,NEO4J_USERNAME,NEO4J_PASSWORD
 
+
+TITLE_PATTERN = re.compile(r'^(mr\.?\s+)?(chief\s+justice|justice|c\.j\.|j\.)\s+', re.IGNORECASE)
+
 driver=GraphDatabase.driver(NEO4J_URL,auth=(NEO4J_USERNAME,NEO4J_PASSWORD))
+
+def strip_judge_title(name):
+    return TITLE_PATTERN.sub('', name.strip()).strip()
+
+def get_cases_by_judge(judge_name):
+    cleaned_name = strip_judge_title(judge_name)
+    query = '''
+        MATCH (c:Case)-[:PRESIDED_BY]->(j:Judge)
+        WHERE toLower(j.name) CONTAINS toLower($judge_name)
+        RETURN c.id AS case_id, c.text AS text
+    '''
+    with driver.session() as session:
+        result = session.run(query, judge_name=cleaned_name)
+        return [{'case_id': record['case_id'], 'text': record['text']} for record in result]
+    
 
 def get_cases_by_section(section_number, act_name=None):
     if act_name:
@@ -24,15 +43,6 @@ def get_cases_by_section(section_number, act_name=None):
         result = session.run(query, **params)
         return [{"case_id": record["case_id"], "text": record["text"]} for record in result]
     
-def get_cases_by_judge(judge_name):
-    query='''
-        MATCH (c:Case)-[:PRESIDED_BY]->(j:Judge)
-    WHERE j.name = $judge_name
-    RETURN c.id AS case_id, c.text AS text
-    '''
-    with driver.session() as session:
-        result=session.run(query,judge_name=judge_name)
-        return [{'case_id':record['case_id'],'text':record['text']} for record in result]
     
 def get_cited_cases(case_id):
     query = """
